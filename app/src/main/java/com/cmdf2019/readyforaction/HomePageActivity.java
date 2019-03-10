@@ -17,4 +17,9 @@ public class HomePageActivity extends AppCompatActivity {
         Intent profilePageActivity = new Intent(this, ProfilePage.class);
         startActivity(profilePageActivity);
     }
+
+    public void goToCustomer1(View view){
+        Intent goToCustomer1Activity = new Intent(this, RPCustomer1.class);
+        startActivity(goToCustomer1Activity);
+    }
 }

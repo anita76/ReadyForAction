@@ -8,11 +8,12 @@
     tools:context=".HomePageActivity">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/shopping_button"
         android:layout_width="208dp"
         android:layout_height="149dp"
         android:layout_marginTop="523dp"
         android:background="@drawable/shoppingrole"
+        android:onClick="goToCustomer1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
