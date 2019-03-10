@@ -106,7 +106,7 @@
         android:background="@null"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:text="Shopping Activity Completed. Great Work!"
+        android:text="Go to a cashier"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

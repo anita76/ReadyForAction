@@ -13,6 +13,11 @@ public class ShoppingCompleted extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_completed);
+        prompt.moveToNextStep();
+        prompt.moveToNextStep();
+        prompt.moveToNextStep();
+        prompt.moveToNextStep();
+        prompt.moveToNextStep();
     }
 
     public void goToHomePage(View view){
@@ -28,5 +33,6 @@ public class ShoppingCompleted extends AppCompatActivity {
     public void nextPrompt(View view) {
         System.out.println(prompt.getCurrPrompt());
         ((TextView)findViewById(R.id.editText)).setText(prompt.getCurrPrompt());
+        prompt.moveToNextStep();
     }
 }
