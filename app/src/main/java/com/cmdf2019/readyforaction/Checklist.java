@@ -38,6 +38,10 @@ public class Checklist {
         }
     }
 
+    public String getCategory(String item) {
+        return database.get(item);
+    }
+
     // called each time an item is added by the user to the checklist
     public void addItem(String item_name) {
         String category = database.get(item_name);
@@ -74,8 +78,8 @@ public class Checklist {
     }
 
     // check off an item as found
-    public void checkoffItem(String category, String item_name) {
-        List<String> items = getItemsInCategory(category);
+    public void checkoffItem(String item_name) {
+        List<String> items = getItemsInCategory(getCategory(item_name));
         for (String item: items) {
             if (item.equals(item_name)) {
                 hasFound.add(item_name);

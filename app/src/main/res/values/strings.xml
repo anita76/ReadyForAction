@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">ReadyForAction</string>
     <string name="my_shopping_list">My Shopping List</string>
+    <string name="title_activity_customer_rp1">CustomerRP1</string>
+    <string name="app_title">Ready For Action</string>
+    <string name="get_started_button"></string>
+    <string name="grocerystore">grocerystore</string>
+    <string name="button">Button</string>
+    <string name="checklist">Checklist</string>
+    <string name="get_help">Get Help</string>
+    <string name="owl">owl</string>
+    <string name="title_activity_checklist_entry">ChecklistEntry</string>
+    <string name="action_settings">Settings</string>
 </resources>

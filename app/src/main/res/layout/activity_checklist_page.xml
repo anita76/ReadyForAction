@@ -16,6 +16,7 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="35dp"
         android:fontFamily="casual"
+        android:lineSpacingExtra="8sp"
         android:text="@string/my_shopping_list"
         android:textAlignment="center"
         android:textColor="@android:color/black"

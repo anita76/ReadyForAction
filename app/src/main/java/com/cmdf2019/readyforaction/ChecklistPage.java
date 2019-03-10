@@ -5,16 +5,25 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ChecklistPage extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
-    String[] myDataset = {"test1", "test2"};
+    Checklist checklist = new Checklist();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //for testing
+        checklist.addItem("Apple");
+        checklist.addItem("Bagel");
+        checklist.addItem("Milk");
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checklist_page);
 
@@ -24,11 +33,8 @@ public class ChecklistPage extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        mAdapter = new ChecklistAdaptor(myDataset);
+        mAdapter = new ChecklistAdaptor(checklist);
         recyclerView.setAdapter(mAdapter);
-
-
-
     }
 
 
