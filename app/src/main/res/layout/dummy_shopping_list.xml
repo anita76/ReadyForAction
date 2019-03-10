@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DummyShoppingList">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:layout_marginBottom="634dp"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="73dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="655dp"
+        android:background="@drawable/homebutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="553dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_button"
+        android:text="Get Help"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button17"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="553dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/rounded_button"
+        android:onClick="goToNextStep"
+        android:text="Completed"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="264dp"
+        android:layout_height="41dp"
+        android:text="CheckBox"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="141dp" />
+
+</android.support.constraint.ConstraintLayout>
