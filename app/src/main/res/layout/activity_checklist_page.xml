@@ -7,6 +7,54 @@
     android:background="@drawable/notepad_background"
     tools:context=".ChecklistPage">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="172dp"
+        android:layout_height="365dp"
+        android:layout_marginStart="223dp"
+        android:layout_marginTop="366dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/owl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/owl" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="208dp"
+        android:layout_height="263dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="190dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/speechbubble2" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="399dp"
+        android:layout_marginEnd="208dp"
+        android:layout_marginBottom="242dp"
+        android:background="@null"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="Find all the items in the shopping list and put them in your basket"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/Shopping_List"
         android:layout_width="300dp"
@@ -43,16 +91,36 @@
 
     <Button
         android:id="@+id/button_last"
-        android:layout_width="wrap_content"
+        android:layout_width="98dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="94dp"
         android:layout_marginTop="619dp"
+        android:layout_marginEnd="219dp"
         android:layout_marginBottom="64dp"
         android:background="@drawable/rounded_button"
         android:onClick="goToNextPage"
-        android:text="Complete"
+        android:text="Completed"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_last2"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="543dp"
+        android:layout_marginEnd="219dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/rounded_button"
+        android:onClick="goToNextPage"
+        android:text="Get Help"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
