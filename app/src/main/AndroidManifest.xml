@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cmdf2019.readyforaction">
-
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".RestaurantRP1"></activity>
-        <activity android:name=".ShoppingCompleted" />
-        <activity android:name=".DummyShoppingList" />
-        <activity android:name=".CustomerRP2" />
-        <activity android:name=".ChecklistEntry1" />
-        <activity android:name=".RPCustomer1" />
-        <activity android:name=".ProfilePage" />
-        <activity android:name=".HomePageActivity" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
-
+package="com.cmdf2019.readyforaction">
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+    <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+<application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme.NoActionBar">
+    <activity android:name=".RestaurantRP1"></activity>
+    <activity android:name=".ShoppingCompleted" />
+    <activity android:name=".DummyShoppingList" />
+    <activity android:name=".CustomerRP2" />
+    <activity android:name=".ChecklistPage"></activity>
+    <activity android:name=".action"></activity>
+    <activity android:name=".ChecklistEntry1"></activity>
+    <activity android:name=".RPCustomer1" />
+    <activity android:name=".ProfilePage"></activity>
+    <activity android:name=".HomePageActivity" />
+    <activity android:name=".MainActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+</application>
 </manifest>
