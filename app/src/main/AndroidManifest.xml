@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".ProfilePage"></activity>
+        <activity android:name=".RestaurantRP1"></activity>
+        <activity android:name=".ShoppingCompleted" />
+        <activity android:name=".DummyShoppingList" />
+        <activity android:name=".CustomerRP2" />
+        <activity android:name=".ChecklistEntry1" />
+        <activity android:name=".RPCustomer1" />
+        <activity android:name=".ProfilePage" />
         <activity android:name=".HomePageActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
