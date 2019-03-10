@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+
         nextPage = (Button) findViewById(R.id.next_button);
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
                 goToActionPage();
             }
         });
-
     }
 
     private void goToActionPage() {
