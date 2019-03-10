@@ -1,10 +1,15 @@
 package com.cmdf2019.readyforaction;
 
+import android.content.res.AssetManager;
+import android.os.Environment;
+
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -22,12 +27,25 @@ public class Checklist {
 
 
     public Checklist() {
-        grocery_map = new TreeMap<>();
-        database = new TreeMap<>();
+        grocery_map = new HashMap<>();
+        database = new HashMap<>();
         hasFound = new ArrayList<>();
 
         // load the grocery spreadsheet into TreeMap database object
-        try (BufferedReader br = new BufferedReader(new FileReader("GroceryDB.csv"))) {
+//        System.out.println("Working Directory = " +
+//                System.getProperty("user.dir"));
+//        String fullPath = System.getProperty("user.dir")+ "/GroceryDB.csv";
+//        System.out.println(fullPath);
+//        File file = new File(System.getProperty("user.dir")+ "/GroceryDB.csv");
+//        System.out.println(file.getName());
+//        System.out.println(file.exists());
+//        System.out.println(file.canRead());
+//        String dirPath = file.getParentFile().getAbsolutePath();
+//        System.out.println(dirPath);
+        // /sdcard/Download/GroceryDB.csv
+        System.out.println(Environment.getExternalStorageDirectory().getAbsolutePath());
+        // System.getProperty("user.dir") + "sdcard/Download/GroceryDB.csv";
+        try (BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir") + "sdcard/Download/GroceryDB.csv"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
@@ -35,7 +53,9 @@ public class Checklist {
             }
         }catch (Exception e) {
             System.out.println("Error while reading database");
+            e.printStackTrace();
         }
+        System.out.println("Constructor completed");
     }
 
     public String getCategory(String item) {
@@ -46,6 +66,10 @@ public class Checklist {
     public void addItem(String item_name) {
         String category = database.get(item_name);
         List curr_list;
+        System.out.println("beep");
+        System.out.println(item_name);
+        System.out.println(database.get(item_name));
+        System.out.println(category);
         if (grocery_map.containsKey(category)) {
             curr_list = grocery_map.get(category);
         }else {

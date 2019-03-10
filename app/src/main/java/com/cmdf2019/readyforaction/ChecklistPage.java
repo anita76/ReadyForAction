@@ -19,22 +19,22 @@ public class ChecklistPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //for testing
+        System.out.println("in onCreate");
         checklist.addItem("Apple");
-        checklist.addItem("Bagel");
-        checklist.addItem("Milk");
-
+//        checklist.addItem("Bagel");
+//        checklist.addItem("Milk");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checklist_page);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(true);
-
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
-        mAdapter = new ChecklistAdaptor(checklist);
-        recyclerView.setAdapter(mAdapter);
+//        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+//        recyclerView.setHasFixedSize(true);
+//
+//        layoutManager = new LinearLayoutManager(this);
+//        recyclerView.setLayoutManager(layoutManager);
+//
+//        mAdapter = new ChecklistAdaptor(checklist);
+//        recyclerView.setAdapter(mAdapter);
     }
 
 
