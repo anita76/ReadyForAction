@@ -3,14 +3,16 @@ package com.cmdf2019.readyforaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class ChecklistEntry1 extends AppCompatActivity implements View.OnClickListener {
+public class ChecklistEntry1 extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
 
     private EditText itemET;
     private Button btn;
@@ -30,7 +32,13 @@ public class ChecklistEntry1 extends AppCompatActivity implements View.OnClickLi
         btn = findViewById(R.id.add_btn);
         itemsList = findViewById(R.id.items_list);
 
+        items = FileHelper.readData(this);
+
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+        itemsList.setAdapter(adapter);
+
         btn.setOnClickListener(this);
+        itemsList.setOnItemClickListener(this);
 
 
     }
@@ -41,10 +49,20 @@ public class ChecklistEntry1 extends AppCompatActivity implements View.OnClickLi
             case R.id.add_btn:
                 String itemEnetered= itemET.getText().toString();
                 adapter.add(itemEnetered);
-                itemET
+                itemET.setText("");
+
+                Toast.makeText(this, "Item Added", Toast.LENGTH_SHORT).show();
 
                 break;
         }
+
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        items.remove(position);
+        adapter.notifyDataSetChanged();
+        Toast.makeText(this, "Delete", Toast.LENGTH_SHORT).show();
 
     }
 }
