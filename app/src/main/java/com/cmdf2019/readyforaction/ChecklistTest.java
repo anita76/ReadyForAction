@@ -9,16 +9,12 @@ public class ChecklistTest {
         Checklist checklist = new Checklist();
         checklist.addItem("Apple");
         checklist.addItem("Bagel");
-        Set<String> categories = checklist.getCategories();
+        Set<String> categories = checklist.getRemainingCategories();
         for (String category: categories) {
             System.out.println("In category: " + category);
-            List<Checklist.Item> items = checklist.getItemsInCategory(category);
-            for (Checklist.Item item: items) {
-                System.out.println("Item: " + item.item_name);
-                System.out.println("Found? : " + item.isFound());
-                System.out.println("After marked as found");
-                item.markAsFound();
-                System.out.println("Found? : " + item.isFound());
+            List<String> items = checklist.getItemsInCategory(category);
+            for (String item: items) {
+                System.out.println("Item: " + item);
             }
         }
 
