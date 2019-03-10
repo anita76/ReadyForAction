@@ -68,4 +68,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
 
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="264dp"
+        android:layout_height="41dp"
+        android:text="CheckBox"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="141dp" />
+
 </android.support.constraint.ConstraintLayout>
