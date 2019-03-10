@@ -22,4 +22,5 @@ public class HomePageActivity extends AppCompatActivity {
         Intent goToCustomer1Activity = new Intent(this, RPCustomer1.class);
         startActivity(goToCustomer1Activity);
     }
+
 }

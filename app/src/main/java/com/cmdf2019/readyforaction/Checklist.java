@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -21,21 +22,10 @@ public class Checklist {
     public List<String> hasFound;
 
 
-    public Checklist() {
-        grocery_map = new TreeMap<>();
-        database = new TreeMap<>();
+    public Checklist(Map<String, String> database) {
+        grocery_map = new HashMap<>();
+        this.database = database;
         hasFound = new ArrayList<>();
-
-        // load the grocery spreadsheet into TreeMap database object
-        try (BufferedReader br = new BufferedReader(new FileReader("GroceryDB.csv"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] values = line.split(",");
-                database.put(values[0], values[1]);
-            }
-        }catch (Exception e) {
-            System.out.println("Error while reading database");
-        }
     }
 
     public String getCategory(String item) {
