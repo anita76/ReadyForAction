@@ -7,20 +7,40 @@
     tools:context=".ProfilePage">
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/EmergencyLastNameET"
         android:layout_width="170dp"
         android:layout_height="47dp"
+        android:layout_marginStart="193dp"
+        android:layout_marginLeft="193dp"
+        android:layout_marginTop="472dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="212dp"
         android:text=""
-        tools:layout_editor_absoluteX="193dp"
-        tools:layout_editor_absoluteY="472dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/EmergencyPhoneNumberET"
         android:layout_width="170dp"
         android:layout_height="47dp"
+        android:layout_marginStart="193dp"
+        android:layout_marginLeft="193dp"
+        android:layout_marginTop="551dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="133dp"
         android:text=""
-        tools:layout_editor_absoluteX="193dp"
-        tools:layout_editor_absoluteY="551dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView"
@@ -164,8 +184,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="663dp"
-        android:onClick="goToHomePage"
         android:background="@drawable/homebutton"
+        android:onClick="goToHomePage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -173,7 +193,7 @@
 
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/firstNameET"
         android:layout_width="170dp"
         android:layout_height="47dp"
         android:layout_marginStart="62dp"
@@ -183,13 +203,14 @@
         android:layout_marginRight="48dp"
         android:layout_marginBottom="12dp"
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/LastNameET"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/LastNameET"
         android:layout_width="170dp"
         android:layout_height="47dp"
         android:layout_marginStart="63dp"
@@ -202,10 +223,10 @@
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/firstNameET" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/EmergencyFirstNameET"
         android:layout_width="170dp"
         android:layout_height="47dp"
         android:layout_marginStart="55dp"
@@ -215,8 +236,21 @@
         android:layout_marginRight="48dp"
         android:layout_marginBottom="34dp"
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        app:layout_constraintBottom_toTopOf="@+id/EmergencyLastNameET"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="50dp"
+        android:text="Save Changes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmergencyPhoneNumberET" />
 </android.support.constraint.ConstraintLayout>
