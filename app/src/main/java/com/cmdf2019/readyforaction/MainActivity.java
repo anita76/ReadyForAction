@@ -12,9 +12,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+<<<<<<< HEAD
 
     public void goToHomePage(View view){
         Intent startHomePageActivity = new Intent(this, HomePageActivity.class);
         startActivity(startHomePageActivity);
     }
 }
+||||||| merged common ancestors
+}
+=======
+
+    public void goToHomePage(View view){
+        Intent startHomePageActivity = new Intent(this, HomePageActivity.class);
+        startActivity(startHomePageActivity);
+    }
+}
+>>>>>>> origin/anita
