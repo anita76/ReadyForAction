@@ -46,7 +46,7 @@ public class ChecklistAdaptor extends RecyclerView.Adapter<ChecklistAdaptor.MyVi
             }
         }
         //add found items
-        for (String item: checklist.getRemainingCategories()) {
+        for (String item: checklist.getFoundItems()) {
             result.put(item, true);
         }
         this.list = new ArrayList(result.keySet());
@@ -58,6 +58,12 @@ public class ChecklistAdaptor extends RecyclerView.Adapter<ChecklistAdaptor.MyVi
                                                             int viewType) {
         // create a new view
         FrameLayout v = (FrameLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.checklist_item, parent, false);
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCheckboxClicked(v);
+            }
+        });
         MyViewHolder vh = new MyViewHolder(v);
         return vh;
     }

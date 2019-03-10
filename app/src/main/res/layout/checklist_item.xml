@@ -10,8 +10,10 @@
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:lineSpacingExtra="8sp"
-        android:onClick="onCheckboxClicked"
         android:text="CheckBox"
         android:textSize="20sp"
         android:textStyle="bold" />
 </FrameLayout>
+
+    <!--android:onClick="onCheckboxClicked"-->
+    <!--android:onClick="onClick"-->

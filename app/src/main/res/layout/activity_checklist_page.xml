@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChecklistPage"
     android:background="@drawable/notepad_background"
-    >
+    tools:context=".ChecklistPage">
 
     <TextView
         android:id="@+id/Shopping_List"
@@ -41,6 +40,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Shopping_List"
         tools:listitem="@layout/checklist_item" />
+
+    <Button
+        android:id="@+id/button_last"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="619dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/rounded_button"
+        android:onClick="goToNextPage"
+        android:text="Complete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

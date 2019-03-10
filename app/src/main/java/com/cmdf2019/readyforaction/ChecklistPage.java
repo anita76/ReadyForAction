@@ -1,9 +1,12 @@
 package com.cmdf2019.readyforaction;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.CheckBox;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,5 +40,16 @@ public class ChecklistPage extends AppCompatActivity {
         recyclerView.setAdapter(mAdapter);
     }
 
+    public void goToNextPage(View view) {
+        if (allChecked()) {
+            Intent startLastPageActivity = new Intent(this, ShoppingCompleted.class);
+            startActivity(startLastPageActivity);
+        }
+    }
+
+    private boolean allChecked() {
+        CheckBox one = (CheckBox) findViewById(R.id.checkBox);
+        return one.isChecked();
+    }
 
 }
