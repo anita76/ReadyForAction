@@ -5,16 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class HomePageActivity extends AppCompatActivity {
+public class ProfilePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.activity_profile_page);
     }
 
-    public void goToProfilePage(View view){
-        Intent profilePageActivity = new Intent(this, ProfilePage.class);
-        startActivity(profilePageActivity);
+    public void goToHomePage(View view){
+        Intent homePageActivity = new Intent(this, HomePageActivity.class);
+        startActivity(homePageActivity);
     }
 }
