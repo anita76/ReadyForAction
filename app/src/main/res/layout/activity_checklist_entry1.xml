@@ -16,12 +16,14 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/item_edit_text"
             android:hint="Enter Item"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"/>
 
         <Button
+            android:id="@+id/add_btn"
             android:text="Add"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -30,6 +32,7 @@
     </LinearLayout>
     
     <ListView
+        android:id="@+id/items_list"
         android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
