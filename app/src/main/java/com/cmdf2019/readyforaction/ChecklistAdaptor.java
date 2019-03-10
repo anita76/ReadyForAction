@@ -33,8 +33,8 @@ public class ChecklistAdaptor extends RecyclerView.Adapter<ChecklistAdaptor.MyVi
 
     // Provide a suitable constructor (depends on the kind of dataset)
     public ChecklistAdaptor(Checklist checklist) {
-        createMap();
         this.checklist = checklist;
+        createMap();
     }
 
     private void createMap() {
