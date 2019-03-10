@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context=".RPCustomer1">
+    tools:context=".RestaurantRP1">
 
     <ImageView
         android:id="@+id/imageView"
@@ -20,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/store" />
+        app:srcCompat="@drawable/restaurant" />
 
     <Button
         android:id="@+id/help_button"
@@ -99,7 +98,7 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="182dp"
+        android:layout_width="197dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
         android:layout_marginTop="399dp"
@@ -108,7 +107,7 @@
         android:background="@null"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:text="Enter the store and get a shopping basket."
+        android:text="Enter the restaurant and ask to be seated at a table"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

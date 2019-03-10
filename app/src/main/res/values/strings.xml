@@ -6,7 +6,7 @@
     <string name="get_started_button"></string>
     <string name="grocerystore">grocerystore</string>
     <string name="button">Button</string>
-    <string name="checklist">Checklist</string>
+    <string name="checklist">Shopping List</string>
     <string name="get_help">Get Help</string>
     <string name="owl">owl</string>
     <string name="title_activity_checklist_entry">ChecklistEntry</string>

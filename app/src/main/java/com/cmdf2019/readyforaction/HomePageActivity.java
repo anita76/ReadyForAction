@@ -19,7 +19,12 @@ public class HomePageActivity extends AppCompatActivity {
     }
 
     public void goToCustomer1(View view){
-        Intent goToCustomer1Activity = new Intent(this, RPCustomer1.class);
+        Intent goToCustomer1Activity = new Intent(this, ChecklistEntry1.class);
+        startActivity(goToCustomer1Activity);
+    }
+
+    public void goToRestaurantPage(View view){
+        Intent goToCustomer1Activity = new Intent(this, RestaurantRP1.class);
         startActivity(goToCustomer1Activity);
     }
 }

@@ -50,8 +50,13 @@ public class RPCustomer1 extends AppCompatActivity implements View.OnClickListen
         }
     }
 
-    public void goToChecklist(View view) {
-        Intent startChecklistPageActivity = new Intent(this, ChecklistPage.class);
-        startActivity(startChecklistPageActivity);
+    public void goToNextStep(View view){
+        Intent homePageActivity = new Intent(this, ChecklistPage.class);
+        startActivity(homePageActivity);
+    }
+
+    public void goToHomePage(View view){
+        Intent homePageActivity = new Intent(this, HomePageActivity.class);
+        startActivity(homePageActivity);
     }
 }

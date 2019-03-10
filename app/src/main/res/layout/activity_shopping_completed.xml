@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context=".RPCustomer1">
+    tools:context=".ShoppingCompleted">
 
     <ImageView
         android:id="@+id/imageView"
@@ -32,7 +31,6 @@
         android:layout_marginBottom="55dp"
         android:background="@drawable/rounded_button"
         android:text="@string/get_help"
-        android:onClick="onClick"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,7 +97,7 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="182dp"
+        android:layout_width="205dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
         android:layout_marginTop="399dp"
@@ -108,7 +106,7 @@
         android:background="@null"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:text="Enter the store and get a shopping basket."
+        android:text="Shopping Activity Completed. Great Work!"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -125,7 +123,7 @@
         android:layout_marginEnd="220dp"
         android:layout_marginBottom="129dp"
         android:background="@drawable/rounded_button"
-        android:text="Completed"
+        android:text="Exit"
         android:onClick="goToNextStep"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -133,5 +131,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>
