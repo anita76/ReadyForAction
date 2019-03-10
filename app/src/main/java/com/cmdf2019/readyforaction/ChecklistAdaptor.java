@@ -58,9 +58,11 @@ public class ChecklistAdaptor extends RecyclerView.Adapter<ChecklistAdaptor.MyVi
                                                             int viewType) {
         // create a new view
         FrameLayout v = (FrameLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.checklist_item, parent, false);
-        v.setOnClickListener(new View.OnClickListener() {
+        CheckBox box = (CheckBox) v.getChildAt(0);
+        box.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("Here");
                 onCheckboxClicked(v);
             }
         });
@@ -73,10 +75,9 @@ public class ChecklistAdaptor extends RecyclerView.Adapter<ChecklistAdaptor.MyVi
         boolean checked = box.isChecked();
         if (checked) {
             String item_name = box.getText().toString();
-            checklist.checkoffItem(item_name);
+            String[] parts = item_name.split(" \\(");
+            checklist.checkoffItem(parts[0]);
         }
-        //TODO - refresh page? move icons down
-        //TODO - check which other items haven't been checked
     }
 
     // Replace the contents of a view (invoked by the layout manager)

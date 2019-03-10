@@ -48,8 +48,9 @@ public class ChecklistPage extends AppCompatActivity {
     }
 
     private boolean allChecked() {
-        CheckBox one = (CheckBox) findViewById(R.id.checkBox);
-        return one.isChecked();
+//        CheckBox one = (CheckBox) findViewById(R.id.checkBox);
+////        return one.isChecked();
+        return (checklist.getRemainingCategories().size() == 0);
     }
 
 }
