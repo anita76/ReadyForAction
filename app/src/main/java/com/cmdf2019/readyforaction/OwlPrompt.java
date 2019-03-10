@@ -17,7 +17,7 @@ public class OwlPrompt {
     }
 
     public void createMap() {
-        try (BufferedReader br = new BufferedReader(new FileReader("Prompt.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir") + "sdcard/Download/Prompt.csv"))) {
             String line;
             br.readLine();
             while ((line = br.readLine()) != null) {

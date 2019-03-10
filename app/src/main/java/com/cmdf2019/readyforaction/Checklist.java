@@ -43,7 +43,7 @@ public class Checklist {
 //        String dirPath = file.getParentFile().getAbsolutePath();
 //        System.out.println(dirPath);
         // /sdcard/Download/GroceryDB.csv
-        System.out.println(Environment.getExternalStorageDirectory().getAbsolutePath());
+        // System.out.println(Environment.getExternalStorageDirectory().getAbsolutePath());
         // System.getProperty("user.dir") + "sdcard/Download/GroceryDB.csv";
         try (BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir") + "sdcard/Download/GroceryDB.csv"))) {
             String line;
